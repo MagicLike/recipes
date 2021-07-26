@@ -1,0 +1,12 @@
+{
+  "id": "stashcat",
+  "name": "Stashcat",
+  "version": "1.0.0",
+  "description": "An unofficial Ferdi recipe for Stashcat",
+  "main": "index.js",
+  "author": "MagicLike <contact.magiclike@protonmail.com>",
+  "license": "MIT",
+  "config": {
+    "serviceURL": "https://app.stashcat.com"
+  }
+}

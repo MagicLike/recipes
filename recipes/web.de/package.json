@@ -1,0 +1,12 @@
+{
+  "id": "web.de",
+  "name": "Web.de",
+  "version": "1.0.0",
+  "description": "An unofficial Ferdi recipe for Web.de",
+  "main": "index.js",
+  "author": "MagicLike <contact.magiclike@protonmail.com>",
+  "license": "MIT",
+  "config": {
+    "serviceURL": "https://web.de"
+  }
+}
