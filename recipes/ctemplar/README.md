@@ -1,6 +1,6 @@
 # CTemplar for Ferdi
 
-This is an unofficial Ferdi recipe for [CTemplar]().
+This is an unofficial Ferdi recipe for [CTemplar](https://ctemplar.com/).
 Made by [MagicLike](https://magiclike.github.io/)
 
 
