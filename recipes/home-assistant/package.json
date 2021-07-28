@@ -1,13 +1,14 @@
 {
-  "id": "web.de",
-  "name": "Web.de",
+  "id": "home-assistant",
+  "name": "Home Assistant",
   "version": "1.0.0",
-  "description": "An unofficial Ferdi recipe for Web.de",
+  "description": "An unofficial Ferdi recipe for Home Assistant",
   "main": "index.js",
   "author": "MagicLike <contact.magiclike@protonmail.com>",
   "repository": "https://github.com/MagicLike/ferdi-recipes",
   "license": "MIT",
   "config": {
-    "serviceURL": "https://web.de"
+    "serviceURL": "http://homeassistant.local:8123",
+    "hasCustomUrl": "true"
   }
 }

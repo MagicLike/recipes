@@ -1,6 +1,6 @@
 # Stashcat for Ferdi
 
-This is an unofficial Ferdi recipe for [Stashcat](https://stashcat.com).
+This is an unofficial Ferdi recipe for [Stashcat](https://stashcat.com). <br>
 Made by [MagicLike](https://magiclike.github.io/)
 
 # Sources

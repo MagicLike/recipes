@@ -1,6 +1,6 @@
 # GMX for Ferdi
 
-This is an unofficial Ferdi recipe for [GMX](https://gmx.net).
+This is an unofficial Ferdi recipe for [GMX](https://gmx.net). <br>
 Made by [MagicLike](https://magiclike.github.io/)
 
 

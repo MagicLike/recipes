@@ -1,6 +1,6 @@
 # Web.de for Ferdi
 
-This is an unofficial Ferdi recipe for [Web.de](https://web.de).
+This is an unofficial Ferdi recipe for [Web.de](https://web.de). <br>
 Made by [MagicLike](https://magiclike.github.io/)
 
 # Sources
