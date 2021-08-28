@@ -19,6 +19,18 @@
   },
   {
     "featured": false,
+    "id": "amazon-web-services",
+    "name": "Amazon Web Services",
+    "version": "1.0.0",
+    "aliases": [
+      "aws"
+    ],
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/amazon-web-services/icon.svg"
+    }
+  },
+  {
+    "featured": false,
     "id": "amazon-work-mail",
     "name": "Amazon WorkMail",
     "version": "1.1.0",
@@ -94,6 +106,15 @@
   },
   {
     "featured": false,
+    "id": "binance",
+    "name": "Binance",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/binance/icon.svg"
+    }
+  },
+  {
+    "featured": false,
     "id": "bip",
     "name": "BiP",
     "version": "1.1.0",
@@ -108,6 +129,15 @@
     "version": "1.1.0",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/bitbucket/icon.svg"
+    }
+  },
+  {
+    "featured": false,
+    "id": "bitwarden",
+    "name": "Bitwarden",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/bitwarden/icon.svg"
     }
   },
   {
@@ -234,6 +264,15 @@
     "version": "1.1.0",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/disqus/icon.svg"
+    }
+  },
+  {
+    "featured": false,
+    "id": "dockerhub",
+    "name": "Docker Hub",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/dockerhub/icon.svg"
     }
   },
   {
@@ -454,6 +493,15 @@
     "version": "1.1.0",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/google-news/icon.svg"
+    }
+  },
+  {
+    "featured": false,
+    "id": "google-translate",
+    "name": "Google Translate",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/google-translate/icon.svg"
     }
   },
   {
@@ -1009,6 +1057,15 @@
   },
   {
     "featured": false,
+    "id": "OVHCloud",
+    "name": "OVH Cloud",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/OVHCloud/icon.svg"
+    }
+  },
+  {
+    "featured": false,
     "id": "paymo",
     "name": "paymo",
     "version": "1.1.0",
@@ -1185,6 +1242,15 @@
     "version": "1.1.0",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/roundcube/icon.svg"
+    }
+  },
+  {
+    "featured": false,
+    "id": "scribens",
+    "name": "Scribens",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/scribens/icon.svg"
     }
   },
   {
