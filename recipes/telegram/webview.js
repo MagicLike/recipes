@@ -1,25 +1,32 @@
 // Code copied from: https://gitlab.com/gortega4/ferdi_recipes
 
-const path = require('path');
+const _path = _interopRequireDefault(require('path'));
 
-module.exports = Franz => {
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = Ferdi => {
   const getMessages = function getMessages() {
     let count = 0;
     let count_sec = 0;
     const elements = document.querySelectorAll('.rp');
     for (let i = 0; i < elements.length; i += 1) {
-      if (elements[i].querySelector('.dialog-subtitle-badge') && (!isNaN(parseInt(elements[i].querySelector('.dialog-subtitle-badge').innerText)))) {
-        if (parseInt(elements[i].querySelector('.dialog-subtitle-badge').innerText) != '' && (elements[i].dataset.peerId > 0)) {
-          count = +count + parseInt(elements[i].querySelector('.dialog-subtitle-badge').innerText);
-        } else {
-          count_sec = +count_sec + parseInt(elements[i].querySelector('.dialog-subtitle-badge').innerText);
+      const subtitleBadge = elements[i].querySelector('.dialog-subtitle-badge');
+      if (subtitleBadge) {
+        const parsedValue = parseInt(subtitleBadge.innerText);
+        if (!isNaN(parsedValue)) {
+          if (elements[i].dataset.peerId > 0) {
+            count += parsedValue;
+          } else {
+            count_sec += parsedValue;
+          }
         }
       }
     }
 
-    Franz.setBadge(count, count_sec);
+    Ferdi.setBadge(count, count_sec);
   };
 
-  Franz.injectCSS(path.join(__dirname, 'service.css'));
-  Franz.loop(getMessages);
+  Ferdi.loop(getMessages);
+
+  Ferdi.injectCSS(_path.default.join(__dirname, 'service.css'));
 };

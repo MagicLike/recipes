@@ -2,7 +2,7 @@ const _path = _interopRequireDefault(require('path'));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = Franz => {
+module.exports = Ferdi => {
   const getMessages = function getMessages() {
     let count = 0;
 
@@ -12,13 +12,10 @@ module.exports = Franz => {
       count += parseInt(counters[i].textContent);
     }
 
-    if (isNaN(count)) {
-      count = 0;
-    }
-
-    Franz.setBadge(count);
+    Ferdi.setBadge(count);
   };
 
-  Franz.injectCSS(_path.default.join(__dirname, 'service.css'));
-  Franz.loop(getMessages);
+  Ferdi.loop(getMessages);
+
+  Ferdi.injectCSS(_path.default.join(__dirname, 'service.css'));
 };
