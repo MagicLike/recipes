@@ -1,5 +1,3 @@
-const { ipcRenderer } = require('electron');
-
 const titleRegex = /^\((\d+)\)/;
 
 const getJson = async (relativeUri) => {
@@ -143,9 +141,9 @@ module.exports = Ferdi => {
     let directCount = 0;
     const matchArr = document.title.match(titleRegex);
     if (matchArr) {
-      directCount = parseInt(matchArr[1], 10);
+      directCount = Ferdi.safeParseInt(matchArr[1]);
     }
-    Ferdi.setBadge(directCount, 0);
+    Ferdi.setBadge(directCount);
   };
 
   getInstanceLogo().then(({ logo, logoMask }) => {
@@ -153,7 +151,7 @@ module.exports = Ferdi => {
     Ferdi.loop(() => {
       getMessages();
       if (updater.update()) {
-        ipcRenderer.sendToHost('avatar', updater.toDataURL());
+        Ferdi.ipcRenderer.sendToHost('avatar', updater.toDataURL());
       }
     });
   }, (e) => {

@@ -1,5 +1,3 @@
-const { ipcRenderer } = require('electron');
-
 module.exports = Ferdi => {
   const getMessages = function getMessages() {
     // get new msg count
@@ -7,7 +5,7 @@ module.exports = Ferdi => {
     const counters = document.querySelectorAll('[class*=FriendMessageCount]');
     [].filter.call(counters, countValue => {
       if (countValue) {
-        count += parseInt(countValue.innerHTML);
+        count += Ferdi.safeParseInt(countValue.innerHTML);
       }
     });
 
@@ -34,7 +32,7 @@ module.exports = Ferdi => {
       const url = link.getAttribute('href');
       event.preventDefault();
       event.stopPropagation();
-      ipcRenderer.sendToHost('new-window', url);
+      Ferdi.ipcRenderer.sendToHost('new-window', url);
     }
   }, true);
 };

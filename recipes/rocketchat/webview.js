@@ -1,5 +1,3 @@
-const { ipcRenderer } = require('electron');
-
 const getTeamIcon = function getTeamIcon() {
   const manifestElement = document.querySelector('link[rel="manifest"]');
 
@@ -23,7 +21,7 @@ const getTeamIcon = function getTeamIcon() {
     const response = JSON.parse(this.responseText);
 
     if (response.icons.length >= 1) {
-      ipcRenderer.sendToHost(
+      Ferdi.ipcRenderer.sendToHost(
         'avatar',
         `${window.location.protocol}//${window.location.host}${response.icons[0].src}`,
       );
@@ -41,7 +39,7 @@ module.exports = Ferdi => {
     let directMessagesCount = 0;
 
     for (const directMessage of directMessages) {
-      directMessagesCount += parseInt(directMessage.textContent, 10);
+      directMessagesCount += Ferdi.safeParseInt(directMessage.textContent);
     }
 
     const indirectMessagesCount = Math.round(

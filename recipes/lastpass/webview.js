@@ -2,31 +2,15 @@ const _path = _interopRequireDefault(require('path'));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const { remote } = require('electron');
-
-const webContents = remote.getCurrentWebContents();
-
-const { session } = webContents;
-
 setTimeout(() => {
   if (document.querySelector('body').innerHTML.includes('Google Chrome 36+')) {
     window.location.reload();
   }
 }, 1000);
+
 window.addEventListener('beforeunload', async () => {
-  try {
-    session.flushStorageData();
-    session.clearStorageData({
-      storages: ['appcache', 'serviceworkers', 'cachestorage', 'websql', 'indexdb'],
-    });
-    const registrations = await window.navigator.serviceWorker.getRegistrations();
-    registrations.forEach(r => {
-      r.unregister();
-      console.log('ServiceWorker unregistered');
-    });
-  } catch (err) {
-    console.err(err);
-  }
+  Ferdi.clearStorageData(['appcache', 'serviceworkers', 'cachestorage', 'websql', 'indexdb']);
+  Ferdi.releaseServiceWorkers();
 });
 
 module.exports = Ferdi => {

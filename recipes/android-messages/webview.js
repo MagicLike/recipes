@@ -1,32 +1,15 @@
-const {
-  remote,
-} = require('electron');
-
-const webContents = remote.getCurrentWebContents();
-const {
-  session,
-} = webContents;
 setTimeout(() => {
   const elem = document.querySelector('#af-error-container');
 
+  // TODO: This will not work for non-english locales
   if (elem && elem.innerText.toLowerCase().includes('the requested url was not found on this server')) {
     window.location.reload();
   }
 }, 1000);
+
 window.addEventListener('beforeunload', async () => {
-  try {
-    session.flushStorageData();
-    session.clearStorageData({
-      storages: ['appcache', 'serviceworkers', 'cachestorage', 'websql', 'indexdb'],
-    });
-    const registrations = await window.navigator.serviceWorker.getRegistrations();
-    registrations.forEach(r => {
-      r.unregister();
-      console.log('ServiceWorker unregistered');
-    });
-  } catch (err) {
-    console.err(err);
-  }
+  Ferdi.clearStorageData(['appcache', 'serviceworkers', 'cachestorage', 'websql', 'indexdb']);
+  Ferdi.releaseServiceWorkers();
 });
 
 module.exports = (Ferdi, settings) => {
