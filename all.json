@@ -250,11 +250,29 @@
   },
   {
     "featured": false,
+    "id": "coinbase",
+    "name": "Coinbase",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/coinbase/icon.svg"
+    }
+  },
+  {
+    "featured": false,
     "id": "devdocs",
     "name": "DevDocs",
     "version": "1.0.2",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/devdocs/icon.svg"
+    }
+  },
+  {
+    "featured": false,
+    "id": "devRant",
+    "name": "devRant",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/devRant/icon.svg"
     }
   },
   {
@@ -300,6 +318,15 @@
     "version": "1.0.0",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/dockerhub/icon.svg"
+    }
+  },
+  {
+    "featured": false,
+    "id": "drive",
+    "name": "Drive",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/drive/icon.svg"
     }
   },
   {
@@ -443,6 +470,15 @@
   },
   {
     "featured": false,
+    "id": "freshdesk",
+    "name": "Freshdesk",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/freshdesk/icon.svg"
+    }
+  },
+  {
+    "featured": false,
     "id": "gadugadu",
     "name": "Gadu-Gadu",
     "version": "1.1.1",
@@ -454,18 +490,9 @@
     "featured": false,
     "id": "github",
     "name": "GitHub",
-    "version": "2.1.1",
+    "version": "2.2.0",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/github/icon.svg"
-    }
-  },
-  {
-    "featured": false,
-    "id": "github_entreprise",
-    "name": "GitHub Enterprise",
-    "version": "1.1.0",
-    "icons": {
-      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/github_entreprise/icon.svg"
     }
   },
   {
@@ -681,6 +708,15 @@
     "version": "1.1.0",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/harvest/icon.svg"
+    }
+  },
+  {
+    "featured": false,
+    "id": "hey",
+    "name": "Hey",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/hey/icon.svg"
     }
   },
   {
@@ -1150,6 +1186,15 @@
   },
   {
     "featured": false,
+    "id": "plek",
+    "name": "Plek",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/plek/icon.svg"
+    }
+  },
+  {
+    "featured": false,
     "id": "pleroma",
     "name": "Pleroma",
     "version": "1.2.0",
@@ -1285,6 +1330,15 @@
   },
   {
     "featured": false,
+    "id": "ritetag",
+    "name": "Ritetag",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/ritetag/icon.svg"
+    }
+  },
+  {
+    "featured": false,
     "id": "rocketchat",
     "name": "Rocket.Chat",
     "version": "1.2.0",
@@ -1384,11 +1438,29 @@
   },
   {
     "featured": false,
+    "id": "sococo",
+    "name": "Sococo",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/sococo/icon.svg"
+    }
+  },
+  {
+    "featured": false,
     "id": "stackexchange",
     "name": "StackExchange",
     "version": "1.1.0",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/stackexchange/icon.svg"
+    }
+  },
+  {
+    "featured": false,
+    "id": "stackoverflow",
+    "name": "Stackoverflow",
+    "version": "0.0.1",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/stackoverflow/icon.svg"
     }
   },
   {
@@ -1449,7 +1521,7 @@
     "featured": false,
     "id": "teamleader",
     "name": "teamleader",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/teamleader/icon.svg"
     }
@@ -1618,6 +1690,15 @@
   },
   {
     "featured": false,
+    "id": "udemy",
+    "name": "Udemy",
+    "version": "1.0.4",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/udemy/icon.svg"
+    }
+  },
+  {
+    "featured": false,
     "id": "unraid",
     "name": "Unraid",
     "version": "1.1.0",
@@ -1668,6 +1749,15 @@
     "version": "1.1.1",
     "icons": {
       "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/wechat/icon.svg"
+    }
+  },
+  {
+    "featured": false,
+    "id": "weekplan",
+    "name": "Weekplan",
+    "version": "1.0.0",
+    "icons": {
+      "svg": "https://cdn.jsdelivr.net/gh/getferdi/recipes/recipes/weekplan/icon.svg"
     }
   },
   {
