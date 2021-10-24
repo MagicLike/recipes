@@ -3,7 +3,7 @@ const _path = _interopRequireDefault(require('path'));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = Ferdi => {
-  const getMessages = function getMessages() {
+  const getMessages = () => {
     let direct = 0;
     const notificationWrapper = document.querySelector(
       '.notifications .notification-wrapper',
@@ -17,11 +17,10 @@ module.exports = Ferdi => {
 
     let indirect = 0;
 
-    document.querySelectorAll('.app-navigation-entry__counter').forEach(
-      (counter) => {
+    for (const counter of document.querySelectorAll('.app-navigation-entry__counter')) {
         indirect += Number(counter.textContent);
-      },
-    );
+      }
+    
     Ferdi.setBadge(direct, indirect);
   };
 

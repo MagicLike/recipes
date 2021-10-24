@@ -1,12 +1,16 @@
 module.exports = Ferdi => {
-  const getMessages = function getMessages() {
-    const directCountElement = document.querySelector('.filter-list .count');
+  const getMessages = () => {
+    const directCountElement = document.querySelector(
+      '.filter-list.js-notification-inboxes .count',
+    );
     let directCount = 0;
     if (directCountElement) {
-      directCount = Ferdi.safeParseInt(directCountElement.innerHTML);
+      directCount = Ferdi.safeParseInt(directCountElement.textContent);
     }
 
-    const indirectCountElement = document.querySelector('[class*="mail-status unread"]');
+    const indirectCountElement = document.querySelector(
+      '[class*="mail-status unread"]',
+    );
     let indirectCount = 0;
     if (indirectCountElement) {
       indirectCount = 1;

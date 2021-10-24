@@ -3,20 +3,20 @@ const _path = _interopRequireDefault(require('path'));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = Ferdi => {
-  const getMessages = function getMessages() {
-    const elementNotify = document.getElementsByClassName('notify');
-    const elementFeed = document.getElementsByClassName('unreadCounter ng-binding ng-scope');
+  const getMessages = () => {
+    const elementNotify = document.querySelectorAll('.notify');
+    const elementFeed = document.querySelectorAll('.unreadCounter.ng-binding.ng-scope');
 
     let countNotify = 0;
     let countFeed = 0;
 
-    for (let i = 0; i < elementNotify.length; i++) {
-      const splitText = elementNotify[i].title.split(':');
+    for (const element of elementNotify) {
+      const splitText = element.title.split(':');
       countNotify += Ferdi.safeParseInt(splitText[1]);
     }
 
-    for (let i = 0; i < elementFeed.length; i++) {
-      countFeed += Ferdi.safeParseInt(elementFeed[i].textContent);
+    for (const element of elementFeed) {
+      countFeed += Ferdi.safeParseInt(element.textContent);
     }
 
     Ferdi.setBadge(countNotify, countFeed);

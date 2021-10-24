@@ -1,8 +1,12 @@
 module.exports = Ferdi => {
-	const getMessages = function getMessages() {
-		const notifications = document.querySelector('.c-notifications-dropdown__count')
-		Ferdi.setBadge(notifications.innerText);
-	};
+  const getMessages = () => {
+    const notifications = document.querySelector(
+      '.c-notifications-dropdown__count',
+    );
+    if (notifications) {
+      Ferdi.setBadge(notifications.textContent);
+    }
+  };
 
-	Ferdi.loop(getMessages);
+  Ferdi.loop(getMessages);
 };

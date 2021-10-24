@@ -2,21 +2,35 @@ setTimeout(() => {
   const elem = document.querySelector('#af-error-container');
 
   // TODO: This will not work for non-english locales
-  if (elem && elem.innerText.toLowerCase().includes('the requested url was not found on this server')) {
+  if (
+    elem &&
+    elem.textContent &&
+    elem.textContent
+      .toLowerCase()
+      .includes('the requested url was not found on this server')
+  ) {
     window.location.reload();
   }
 }, 1000);
 
-window.addEventListener('beforeunload', async () => {
-  Ferdi.clearStorageData(['appcache', 'serviceworkers', 'cachestorage', 'websql', 'indexdb']);
-  Ferdi.releaseServiceWorkers();
-});
-
 module.exports = (Ferdi, settings) => {
-  function getMessages() {
+  const getMessages = () => {
     const messages = document.querySelectorAll('.text-content.unread').length;
     Ferdi.setBadge(messages);
-  }
+  };
+
+  window.addEventListener('beforeunload', async () => {
+    Ferdi.clearStorageData(settings.id, {
+      storages: [
+        'appcache',
+        'serviceworkers',
+        'cachestorage',
+        'websql',
+        'indexdb',
+      ],
+    });
+    Ferdi.releaseServiceWorkers();
+  });
 
   Ferdi.loop(getMessages);
 

@@ -1,9 +1,11 @@
 module.exports = Ferdi => {
-  const getMessages = function getMessages() {
+  const getMessages = () => {
     let unread = 0;
-    const notificationBadge = document.getElementsByClassName('notification-badge')[0];
+    const notificationBadge = document.querySelectorAll(
+      '.notification-badge',
+    )[0];
     if (notificationBadge != undefined) {
-      unread = notificationBadge.innerText;
+      unread = Ferdi.safeParseInt(notificationBadge.textContent);
     }
     Ferdi.setBadge(unread);
   };

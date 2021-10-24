@@ -1,26 +1,24 @@
 const _path = _interopRequireDefault(require('path'));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
-window.onload = () => {
-  const title = document.querySelector('.window-title').innerHTML;
+window.addEventListener('load', () => {
+  const title = document.querySelector('.window-title').textContent;
 
   if (title && title.includes('Google Chrome 36+')) {
     window.location.reload();
   }
-};
-
-window.addEventListener('beforeunload', async () => {
-  Ferdi.clearStorageData(['serviceworkers']);
 });
 
-module.exports = Ferdi => {
-  const getMessages = function getMessages() {
+module.exports = (Ferdi, settings) => {
+  const getMessages = () => {
     const elements = document.querySelectorAll('.CxUIE, .unread');
     let count = 0;
 
-    for (let i = 0; i < elements.length; i += 1) {
-      if (elements[i].querySelectorAll('*[data-icon="muted"]').length === 0) {
+    for (const element of elements) {
+      if (element.querySelectorAll('*[data-icon="muted"]').length === 0) {
         count += 1;
       }
     }
@@ -29,6 +27,10 @@ module.exports = Ferdi => {
   };
 
   Ferdi.loop(getMessages);
+
+  window.addEventListener('beforeunload', async () => {
+    Ferdi.clearStorageData(settings.id, { storages: ['serviceworkers'] });
+  });
 
   Ferdi.injectCSS(_path.default.join(__dirname, 'service.css'));
 };
