@@ -1,0 +1,16 @@
+{
+  "id": "posteo",
+  "name": "Posteo",
+  "version": "1.0.0",
+  "description": "An unofficial Ferdi recipe for Posteo",
+  "author": "MagicLike <contact.magiclike@protonmail.com>",
+  "repository": "https://github.com/MagicLike/ferdi-recipes",
+  "license": "MIT",
+  "aliases": [
+    "mail",
+    "e-mail"
+  ],
+  "config": {
+    "serviceURL": "https://posteo.de/"
+  }
+}

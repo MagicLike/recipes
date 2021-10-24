@@ -1,0 +1,18 @@
+{
+  "id": "itch.io",
+  "name": "itch.io",
+  "version": "1.0.0",
+  "description": "An unofficial Ferdi recipe for itch.io",
+  "author": "MagicLike <contact.magiclike@protonmail.com>",
+  "repository": "https://github.com/MagicLike/ferdi-recipes",
+  "license": "MIT",
+  "aliases": [
+    "games",
+    "gaming",
+    "play",
+    "indie"
+  ],
+  "config": {
+    "serviceURL": "https://itch.io"
+  }
+}
