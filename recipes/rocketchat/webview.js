@@ -1,39 +1,6 @@
-const getTeamIcon = function getTeamIcon() {
-  const manifestElement = document.querySelector('link[rel="manifest"]');
-
-  if (manifestElement == null) {
-    return;
-  }
-
-  const manifestUrl = manifestElement.getAttribute('href');
-
-  if (manifestUrl == null) {
-    return;
-  }
-
-  const xmlhttp = new XMLHttpRequest();
-
-  xmlhttp.onreadystatechange = function () {
-    if (this.readyState != 4 || this.status != 200) {
-      return;
-    }
-
-    const response = JSON.parse(this.responseText);
-
-    if (response.icons.length >= 1) {
-      Ferdi.ipcRenderer.sendToHost(
-        'avatar',
-        `${window.location.protocol}//${window.location.host}${response.icons[0].src}`,
-      );
-    }
-  };
-
-  xmlhttp.open('GET', manifestUrl, true);
-  xmlhttp.send();
-};
 
 module.exports = Ferdi => {
-  const getMessages = function getMessages() {
+  const getMessages = () => {
     const directMessages = document.querySelectorAll('.rcx-badge');
 
     let directMessagesCount = 0;
@@ -50,6 +17,37 @@ module.exports = Ferdi => {
   };
 
   Ferdi.loop(getMessages);
+
+  const getTeamIcon = function getTeamIcon() {
+    const manifestElement = document.querySelector('link[rel="manifest"]');
+
+    if (manifestElement == null) {
+      return;
+    }
+
+    const manifestUrl = manifestElement.getAttribute('href');
+
+    if (manifestUrl == null) {
+      return;
+    }
+
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.addEventListener('readystatechange', function () {
+      if (this.readyState != 4 || this.status != 200) {
+        return;
+      }
+
+      const response = JSON.parse(this.responseText);
+
+      if (response.icons.length > 0) {
+        Ferdi.setAvatarImage(`${window.location.protocol}//${window.location.host}${response.icons[0].src}`);
+      }
+    });
+
+    xmlhttp.open('GET', manifestUrl, true);
+    xmlhttp.send();
+  };
 
   setTimeout(() => {
     getTeamIcon();
