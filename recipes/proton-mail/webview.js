@@ -1,15 +1,13 @@
 module.exports = Ferdi => {
   const getMessages = () => {
-    const element = document.querySelector('.navigationItem-counter');
-    if (!element) {
-      return;
+    let unreadCount = 0;
+    // Loop over all displayed counters and take the highest one (from the "All Mail" folder)
+    for (const counterElement of document.querySelectorAll('.navigation-counter-item')) {
+      const unreadCounter = Ferdi.safeParseInt(counterElement.textContent);
+      unreadCount = Math.max(unreadCount, unreadCounter);
     }
-    const text = element.textContent;
-    if (text) {
-      // eslint-disable-next-line unicorn/prefer-string-slice
-      const count = Ferdi.safeParseInt(text.substring(1, text.length - 1));
-      Ferdi.setBadge(count);
-    }
+
+    Ferdi.setBadge(unreadCount);
   };
 
   Ferdi.loop(getMessages);

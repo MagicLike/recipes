@@ -41,7 +41,7 @@ We have also created a nice script that already does 50% of the work for you - y
 pnpm install
 ```
 
-4. You can now run our automatic recipe wizard that creates and opens the new recipe for you:
+4. (Optional - contd) You can now run our automatic recipe wizard that creates and opens the new recipe for you:
 
 ```Bash
 # Make sure you are still in the repository's folder
@@ -51,6 +51,12 @@ pnpm run create "Service Name"
 Replace `Service Name` with the name of your service, e.g. `pnpm run create "Google Hangouts"`.
 This command will automatically create the development recipe in the correct folder, prepares it for your service and opens the new recipe in your file explorer or Finder. 5. Reload Ferdi (`CMD/CTRL + SHIFT + R`) in order for it to register the new recipe 6. You can now develop your recipe as described below. Please continue down below with "[Publishing](#Publishing)" after you are done creating your recipe.
 
+5. (Mandatory) Please run the following step before raising a PR:
+```Bash
+pnpm run package
+```
+Fix any issues that are reported.
+
 ## Recipe structure
 
 Every recipe needs a specific file structure in order to work as a Ferdi recipe
@@ -58,7 +64,7 @@ Every recipe needs a specific file structure in order to work as a Ferdi recipe
 - icon.svg - Icon for the service in SVG form (must be square)
 - index.js - Backend script, this script is NOT included in the service webview but only in Ferdi itself
 - package.json - Information about the recipe
-- webview.js - Frontend script, this script is injected into the service itself but still has access to all NodeJS APIs
+- webview.js - Optional frontend script, this script is injected into the service itself but still has access to all NodeJS APIs
 - darkmode.css - CSS File that gets included when dark mode is activated
 
 ### package.json
@@ -147,7 +153,7 @@ overrideUserAgent() {
 
 ### webview.js
 
-The `webview.js` is the actual script that will be loaded into the webview. Here you can do whatever you want to do in order perfectly integrate the service into Ferdi. For convenience, we have provided a very simple set of functions to set unread message badges (`Ferdi.setBadge()`), set active dialog title (`Ferdi.setDialogTitle()`) and inject CSS files (`Ferdi.injectCSS()`).
+The optional `webview.js` is the actual script that will be loaded into the webview. Here you can do whatever you want to do in order perfectly integrate the service into Ferdi. For convenience, we have provided a very simple set of functions to set unread message badges (`Ferdi.setBadge()`), set active dialog title (`Ferdi.setDialogTitle()`) and inject CSS files (`Ferdi.injectCSS()`).
 
 ```js
 // telegram integration
