@@ -93,7 +93,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/700707?v=4",
       "profile": "http://blog.simonszu.de",
       "contributions": [
-        "code"
+        "code",
+        "review"
       ]
     },
     {
@@ -164,6 +165,114 @@
       "name": "Bauke van der Woude",
       "avatar_url": "https://avatars.githubusercontent.com/u/6784391?v=4",
       "profile": "https://github.com/baukevdw",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "pesader",
+      "name": "pesader",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65264536?v=4",
+      "profile": "https://github.com/pesader",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "tukiplus",
+      "name": "tukiplus",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98679174?v=4",
+      "profile": "https://github.com/tukiplus",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ravindragullapalli",
+      "name": "Ravindra Gullapalli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3313079?v=4",
+      "profile": "https://www.linkedin.com/in/link2ravig/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "brunoccr",
+      "name": "Bruno Rossetto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5890352?v=4",
+      "profile": "https://github.com/brunoccr",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "wajda",
+      "name": "Alex Vayda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/795479?v=4",
+      "profile": "https://github.com/wajda",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "nurse-the-code",
+      "name": "Malachi Gruenhagen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68450431?v=4",
+      "profile": "https://github.com/nurse-the-code",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "jamesandariese",
+      "name": "James Andariese",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2583421?v=4",
+      "profile": "https://github.com/jamesandariese",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Arunscape",
+      "name": "Arun Woosaree",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8227297?v=4",
+      "profile": "http://linkedin.com/in/arun-woosaree",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Lawrence-ux",
+      "name": "Carter Poe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39221871?v=4",
+      "profile": "https://github.com/Lawrence-ux",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "BramManuel",
+      "name": "Bram Janssen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27723033?v=4",
+      "profile": "https://github.com/BramManuel",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "alecive",
+      "name": "Alessandro Roncone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4378663?v=4",
+      "profile": "https://hiro-group.ronc.one",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Celedhrim",
+      "name": "Celedhrim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1573484?v=4",
+      "profile": "http://www.ielf.org",
       "contributions": [
         "code"
       ]
