@@ -1,10 +1,7 @@
 {
   "id": "stashcat",
   "name": "Stashcat",
-  "version": "1.0.1",
-  "description": "An unofficial Ferdi recipe for Stashcat",
-  "main": "index.js",
-  "author": "MagicLike <contact.magiclike@protonmail.com>",
+  "version": "1.0.2",
   "repository": "https://github.com/MagicLike/ferdi-recipes",
   "license": "MIT",
   "aliases": [

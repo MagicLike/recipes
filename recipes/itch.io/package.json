@@ -1,9 +1,7 @@
 {
   "id": "itch.io",
   "name": "itch.io",
-  "version": "1.0.0",
-  "description": "An unofficial Ferdi recipe for itch.io",
-  "author": "MagicLike <contact.magiclike@protonmail.com>",
+  "version": "1.0.1",
   "repository": "https://github.com/MagicLike/ferdi-recipes",
   "license": "MIT",
   "aliases": [
